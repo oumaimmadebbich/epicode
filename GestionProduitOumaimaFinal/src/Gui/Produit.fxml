@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProduitController">
+   <children>
+      <Label layoutX="198.0" layoutY="22.0" text="Gestion Produit">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="57.0" text="Ajouter Produit :" />
+      <Label layoutX="30.0" layoutY="88.0" text="Titre :" />
+      <Label layoutX="30.0" layoutY="121.0" text="Prix :" />
+      <Label layoutX="29.0" layoutY="154.0" text="Description :" />
+      <Label layoutX="31.0" layoutY="192.0" text="ID_ categ" />
+      <Label layoutX="26.0" layoutY="294.0" text="Image :" />
+      <Label layoutX="29.0" layoutY="261.0" text="Quantité :" />
+      <TextField fx:id="titre" layoutX="124.0" layoutY="84.0" />
+      <TextField fx:id="prix" layoutX="124.0" layoutY="117.0" />
+      <TextField fx:id="description" layoutX="124.0" layoutY="150.0" />
+      <TextField fx:id="quantite" layoutX="124.0" layoutY="257.0" />
+      <ComboBox fx:id="comb_categ" layoutX="123.0" layoutY="197.0" prefWidth="150.0" promptText="oumaima" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="98.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="ajouter" layoutX="124.0" layoutY="461.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button fx:id="supprimer" layoutX="509.0" layoutY="369.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <TableView fx:id="table_Prod" layoutX="342.0" layoutY="80.0" prefHeight="266.0" prefWidth="616.0">
+        <columns>
+          <TableColumn fx:id="idP" prefWidth="58.0" text="ID" />
+          <TableColumn fx:id="titreP" prefWidth="50.0" text="titre" />
+            <TableColumn fx:id="prixP" prefWidth="88.0" text="prix" />
+            <TableColumn fx:id="descriptionP" prefWidth="69.0" text="description" />
+            <TableColumn fx:id="image" prefWidth="87.0" text="image" />
+            <TableColumn fx:id="quantiteP" prefWidth="74.0" text="quantité" />
+            <TableColumn fx:id="id_categ" prefWidth="104.0" text="id_catégorie" />
+        </columns>
+      </TableView>
+      <Button layoutX="199.0" layoutY="461.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <FlowPane prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="515.0" layoutY="461.0" mnemonicParsing="false" onAction="#gestion_categorie" text="gestion categorie" />
+      <Button id="AnchorPane" layoutX="679.0" layoutY="492.0" mnemonicParsing="false" onAction="#stat" text="stat" />
+      <Button fx:id="pdf" layoutX="266.0" layoutY="523.0" mnemonicParsing="false" onAction="#pdf" text="pdf" />
+      <Button fx:id="codeQr" layoutX="736.0" layoutY="400.0" mnemonicParsing="false" onAction="#qrcode" text="code Qr" />
+      <ImageView fx:id="codeqrr" fitHeight="92.0" fitWidth="172.0" layoutX="780.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true" />
+
+   </children>
+</AnchorPane>

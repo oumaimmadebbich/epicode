@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="1022.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProduitstatController">
+    <stylesheets>
+        <URL value="@produitstat.css" />
+    </stylesheets>
+   <children>
+      <PieChart id="chartCategorie" fx:id="pie" layoutX="43.0" layoutY="68.0" prefHeight="450.0" prefWidth="450.0" />
+      <Label id="totale" fx:id="totale" layoutX="667.0" layoutY="108.0" text="totale" />
+      <Label id="totaleProduit" layoutX="663.0" layoutY="73.0" text="Nombre totale des produits" />
+      <Label layoutX="497.0" layoutY="24.0" text="produit selon les categorie" />
+      <Label layoutX="651.0" layoutY="174.0" text="moyenne des prix des produits ajoutees" />
+      <Label id="averageprix" fx:id="average" layoutX="651.0" layoutY="222.0" text="average" />
+      <Label layoutX="497.0" layoutY="24.0" text="produit selon les categorie" />
+      <Label layoutX="688.0" layoutY="293.0" prefHeight="21.0" prefWidth="203.0" text="list des produit avec remise" />
+      <TableView fx:id="remisetab" layoutX="555.0" layoutY="340.0" prefHeight="196.0" prefWidth="434.0" stylesheets="@tablev.css">
+        <columns>
+          <TableColumn fx:id="nomProdd" prefWidth="75.0" text="nom produit" />
+          <TableColumn fx:id="prixprodd" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="pourprodd" prefWidth="75.0" text="pourcentage remise" />
+            <TableColumn fx:id="prixRemise" prefWidth="75.0" text="prix remise" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
