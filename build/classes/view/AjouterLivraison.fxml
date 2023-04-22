@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" styleClass="mainFxmlClass"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterLivraisonController">
+    <children>
+        <Pane fx:id="liv_id" layoutX="15.0" layoutY="17.0" prefHeight="367.0" prefWidth="571.0" style="-fx-background-color: ivory; -fx-border-width: 2px; -fx-border-color: black;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="17.0">
+            <children>
+                <Label layoutX="23.0" layoutY="54.0" prefHeight="17.0" prefWidth="80.0" text="nom_desti: " textAlignment="CENTER" />
+                <Label layoutX="22.0" layoutY="84.0" text="date_livraison : " />
+                <Label layoutX="23.0" layoutY="114.0" text="adresse_destination :" />
+                <Label layoutX="23.0" layoutY="144.0" text="telephone_destination :" />
+                <Label layoutX="23.0" layoutY="174.0" text="id_commande_id" />
+                <Button id="valider" fx:id="btn" layoutX="405.0" layoutY="274.0" mnemonicParsing="false" text="Valider">
+                
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <TextField id="nomText" fx:id="nomDestination" layoutX="150.0" layoutY="50.0" />
+                <TextField id="secteurText" fx:id="id_cmd" layoutX="150.0" layoutY="110.0" />
+                <TextField id="telephoneText" fx:id="adresseDestination" layoutX="150.0" layoutY="140.0" />
+                <TextField id="passwordText" fx:id="telephoneDestination" layoutX="150.0" layoutY="170.0" />
+
+            <Button fx:id="retourr" layoutX="46.0" layoutY="274.0" mnemonicParsing="false" onAction="#back" text="retour" />
+            <Label layoutX="23.0" layoutY="208.0" text="Livreur_id" />
+            <ComboBox fx:id="comboLivreur" layoutX="149.0" layoutY="213.0" prefWidth="150.0" />
+            <DatePicker fx:id="dateLivraison" layoutX="143.0" layoutY="80.0" />
+            </children>
+            
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" stylesheets="@styles.css" prefWidth="600.0" styleClass="mainFxmlClass"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjouterLivreurController">
+    <children>
+        <Pane fx:id="BoutonValider" layoutX="14.0" layoutY="14.0" prefHeight="367.0" prefWidth="571.0" style="-fx-background-color: ivory; -fx-border-width: 2px; -fx-border-color: black;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
+            <children>
+                <Label layoutX="70.0" layoutY="50.0" prefHeight="17.0" prefWidth="80.0" text="Nom :" textAlignment="CENTER" />
+                <Label layoutX="70.0" layoutY="80.0" text="Prenom :" />
+                <Label layoutX="70.0" layoutY="110.0" text="secteur :" />
+                <Label layoutX="70.0" layoutY="140.0" text="telephone :" />
+                <Label layoutX="70.0" layoutY="170.0" text="password :" />
+                <Label layoutX="70.0" layoutY="200.0" text="type_livreur :" />
+                <Button id="valider" fx:id="btn" layoutX="405.0" layoutY="274.0" mnemonicParsing="false" text="Valider">
+                
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <TextField id="nomText" fx:id="nom" layoutX="150.0" layoutY="50.0" />
+                <TextField id="prenomText" fx:id="prenom" layoutX="150.0" layoutY="80.0" />
+                <TextField id="secteurText" fx:id="secteur" layoutX="150.0" layoutY="110.0" />
+                <TextField id="telephoneText" fx:id="telephone" layoutX="150.0" layoutY="140.0" />
+                <TextField id="type_livreurText" fx:id="type_livreur" layoutX="150.0" layoutY="200.0" />
+            <Button fx:id="retourr" layoutX="46.0" layoutY="274.0" mnemonicParsing="false" onAction="#back" text="retour" />
+            <PasswordField fx:id="password" layoutX="150.0" layoutY="171.0" />
+            </children>
+            
+        </Pane>
+    </children>
+</AnchorPane>
