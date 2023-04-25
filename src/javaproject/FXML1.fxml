@@ -3,8 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
@@ -29,5 +32,15 @@
       <Button fx:id="Switch2" layoutX="63.0" layoutY="269.0" mnemonicParsing="false" onAction="#SwapL" text="&lt;" />
       <Text fx:id="FlowEvent" layoutX="215.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="myText" text="Text" wrappingWidth="526.13671875" />
       <Label layoutX="185.0" layoutY="518.0" text="Description :" />
+      <Pane layoutX="-1.0" prefHeight="46.0" prefWidth="957.0" style="-fx-padding: 23px; -fx-border-style: solid inside; -fx-border-color: black; -fx-border-insets: 5; -fx-border-width: 5;">
+         <children>
+            <MenuButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" styleClass="button" text="Reused">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Events" />
+                <MenuItem fx:id="VersP" mnemonicParsing="false" onAction="#ChangeToP" text="Mes Participations" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

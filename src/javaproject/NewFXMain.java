@@ -33,6 +33,7 @@ public class NewFXMain extends Application {
         Scene scene = new Scene(root, 300, 250);
         
         scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+       
         primaryStage.setScene(scene);
         primaryStage.show();
     }

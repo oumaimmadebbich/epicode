@@ -6,6 +6,7 @@
 package services;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -65,5 +66,23 @@ public class ParticipationService implements ParticipationInterface {
         Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
     }
     }
-    
+     public int Count(int id)
+     { 
+          
+        try {
+             String req = "SELECT COUNT(*) FROM participation WHERE id_evenement_id= ?";
+           PreparedStatement st = cnx.prepareStatement(req);
+        st.setInt(1, id); // set the parameter using setInt method
+        System.out.println(req);
+        ResultSet rs = st.executeQuery(); // don't pass the
+        if (rs.next()) {
+    int theCount = rs.getInt(1);
+    System.out.println(theCount);
+    return theCount;
+        }           
+}      catch (SQLException ex) {
+            Logger.getLogger(ParticipationService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+     }
 }

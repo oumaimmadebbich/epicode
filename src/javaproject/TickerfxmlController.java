@@ -6,19 +6,45 @@
 package javaproject;
 
 
-import com.gluonhq.impl.charm.a.b.b.n;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.text.Format;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Pagination;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.util.Callback;
+import javax.imageio.ImageIO;
 import models.Event;
 import models.Participation;
 import services.EventInterface;
@@ -41,12 +67,19 @@ public class TickerfxmlController implements Initializable {
    
     @FXML
     private AnchorPane anchor;
+    @FXML
+    private ToggleButton IMPRIME;
+     WebView webview;
+    @FXML
+    private MenuItem VersEv;
+    @FXML
+    private MenuItem VersP;
 
     /**
      * Initializes the controller class.
      */
-    public WebView addT(int pageIndex)
-    { WebView webview=new WebView();
+    public WebView addT(int pageIndex) throws WriterException
+    { webview=new WebView();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy"); 
     String year=sdf.format(EL.get(pageIndex).getDateEv());
     Format f = new SimpleDateFormat("EEEE");  
@@ -54,6 +87,31 @@ public class TickerfxmlController implements Initializable {
      EV=pv.getEV(EL.get(pageIndex).getIdEv());
       String DBPath =   EV.getImageEvent();
         System.out.println(DBPath);
+        String qrCodeData = "**** Prenom :"+EL.get(pageIndex).getPrenom()+"**** /n Nom :"
+                + EL.get(pageIndex).getNom()+"/n **** ID Client:"+EL.get(pageIndex).getIdC()+"****";
+        
+            String filePath = "codeqrr.png";
+            QRCodeWriter qrCodeWriter = new QRCodeWriter();
+            BitMatrix bitMatrix = qrCodeWriter.encode(qrCodeData, BarcodeFormat.QR_CODE, 150,150);
+            
+            try {
+                MatrixToImageWriter.writeToPath(bitMatrix, "jpg", Paths.get(filePath));
+            } catch (IOException ex) {
+                Logger.getLogger(QrCodeController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+           Image  image = new Image(new File(filePath).toURI().toString());
+           String imageData = "";
+try {
+    BufferedImage bImage = SwingFXUtils.fromFXImage(image, null);
+    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+    ImageIO.write(bImage, "jpg", bos);
+    byte[] data = bos.toByteArray();
+    imageData = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(data);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
       
        
     
@@ -301,7 +359,7 @@ public class TickerfxmlController implements Initializable {
 "				<p>DOORS <span>@</span> 7:00 PM</p>\n" +
 "			</div>\n" +
 "			<div class=\"barcode\">\n" +
-"				<img src=\"https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb\" alt=\"QR code\">\n" +
+"				<img src="+imageData+" alt=\"QR code\">\n" +
 "			</div>\n" +
 "			<p class=\"ticket-number\">\n" +
 "				#"+EL.get(pageIndex).getId()+"\n" +
@@ -323,7 +381,12 @@ public class TickerfxmlController implements Initializable {
    Pag.setPageFactory(new Callback<Integer, Node>() {
             @Override
             public Node call(Integer pageIndex) {
-                return addT(pageIndex);
+                try {
+                    return addT(pageIndex);
+                } catch (WriterException ex) {
+                    Logger.getLogger(TickerfxmlController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                return null;
                 
                 
             }
@@ -336,5 +399,49 @@ public class TickerfxmlController implements Initializable {
        
         // TODO
     }    
+
+    @FXML
+    private void Print(ActionEvent event) throws MalformedURLException, IOException {
+       
+        WritableImage image = webview.snapshot(new SnapshotParameters(), null);
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save Image");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("PNG", "*.png"),
+                new FileChooser.ExtensionFilter("JPEG", "*.jpg", "*.jpeg"),
+                new FileChooser.ExtensionFilter("BMP", "*.bmp")
+        );
+
+        File file = fileChooser.showSaveDialog(webview.getScene().getWindow());
+        if (file != null) {
+            try {
+                ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
+            } catch (IOException e) {
+                System.err.println("Failed to save image: " + e.getMessage());
+            }
+        }
+    }
+
+    @FXML
+    private void ChangeToV(ActionEvent event) throws IOException {
+         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML1.fxml"));
+        
+        
+        Parent root = loader.load();
+        
+        
+        Scene scene = new Scene(root, 300, 250);
+        
+        scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+        Stage primaryStage=new Stage();
+        
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    
+   
+ 
     
 }

@@ -15,6 +15,7 @@ import models.Participation;
 public interface ParticipationInterface {
     public void delete(int id);
     public List<Participation> fetchParticiation();
+    public int Count(int id);
     
     
 }

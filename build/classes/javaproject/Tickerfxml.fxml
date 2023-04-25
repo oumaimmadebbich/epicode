@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="400.0" prefWidth="688.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.TickerfxmlController">
@@ -12,9 +13,10 @@
    <children>
       <MenuButton layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="23.0" prefWidth="85.0" styleClass="button" text="Reused">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem fx:id="VersEv" mnemonicParsing="false" onAction="#ChangeToV" text="Events" />
+          <MenuItem fx:id="VersP" mnemonicParsing="false" text="Mes Participations" />
         </items>
       </MenuButton>
+      <ToggleButton fx:id="IMPRIME" layoutX="86.0" layoutY="2.0" mnemonicParsing="false" onAction="#Print" prefHeight="23.0" prefWidth="253.0" styleClass="button" text="Print Ticket" />
    </children>
 </AnchorPane>

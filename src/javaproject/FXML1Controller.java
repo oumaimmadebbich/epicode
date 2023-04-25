@@ -5,22 +5,13 @@
  */
 package javaproject;
 
-import com.gluonhq.impl.charm.a.b.b.g;
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
-
-import com.sun.javafx.font.Glyph;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import java.awt.Graphics;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -32,23 +23,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import models.Client;
 
 
 import models.Event;
 import services.EventInterface;
 import services.EventService;
+import services.ParticipationInterface;
+import services.ParticipationService;
 
 /**
  * FXML Controller class
@@ -81,12 +70,16 @@ public class FXML1Controller implements Initializable {
     @FXML
     
    private AnchorPane AnchorE;
+    
    EventInterface ps = new EventService();
    List<Event> EL=ps.fetchEvents();
    int i=0;
    int m=EL.size();
+   ParticipationInterface pl=new ParticipationService();
    
     Event EV=new Event();
+    @FXML
+    private MenuItem VersP;
     
     
     
@@ -118,6 +111,9 @@ AnchorPane.setLeftAnchor(partIcon, 43.0);
 AnchorPane.setTopAnchor(partIcon, 350.0);
         Event Es=EL.get(0);
         p=Es.getIdEvent();
+        int k=pl.Count(Es.getIdEvent());
+         String r=String.valueOf(k);
+        nbrP.setText(r);
         textT.setText(Es.getTitleEvent());
         TextO.setText(Es.getOrganisation());
         TextD.setText(Es.getTimeEvent().toString());
@@ -171,13 +167,15 @@ AnchorPane.setTopAnchor(partIcon, 350.0);
         {i++;
          Event E=EL.get(i);
          p=E.getIdEvent();
+         int k=pl.Count(E.getIdEvent());
              
                   String x=E.getImageEvent();
             String DBPath = "C:\\xampp\\htdocs\\Offre+Demande\\public\\uploads\\" + x;
             File file = new File(DBPath);
             Image img = new Image(file.toURI().toURL().toString());
             ImageV2.setImage(img);
-            
+            String r=String.valueOf(k);
+            nbrP.setText(r);
            FlowEvent.setText(E.getDescriptionEvent());
             textT.setText(E.getTitleEvent());
             TextO.setText(E.getOrganisation());
@@ -194,18 +192,38 @@ AnchorPane.setTopAnchor(partIcon, 350.0);
         {i--;
          Event E=EL.get(i);
          p=E.getIdEvent();
+         int k=pl.Count(E.getIdEvent());
+         String r=String.valueOf(k);
              
                   String x=E.getImageEvent();
             String DBPath = "C:\\xampp\\htdocs\\Offre+Demande\\public\\uploads\\" + x;
             File file = new File(DBPath);
             Image img = new Image(file.toURI().toURL().toString());
             ImageV2.setImage(img);
-            
+            nbrP.setText(r);
             FlowEvent.setText(E.getDescriptionEvent());
             textT.setText(E.getTitleEvent());
             TextO.setText(E.getOrganisation());
             TextD.setText(E.getTimeEvent().toString());
         }
+    }
+
+    @FXML
+    private void ChangeToP(ActionEvent event) throws IOException {
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("Tickerfxml.fxml"));
+        
+        
+        Parent root = loader.load();
+        
+        
+        Scene scene = new Scene(root, 300, 250);
+        
+        scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+        
+        Stage primaryStage=new Stage();
+        
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
    
     
