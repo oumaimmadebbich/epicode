@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GestionOffresController">
+   <children>
+      <AnchorPane layoutX="29.0" layoutY="14.0" prefHeight="500.0" prefWidth="216.0" style="-fx-background-color: #373737;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="8.0" layoutY="8.0" prefHeight="86.0" prefWidth="216.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="74.0" layoutY="27.0" text="ReUsed" textFill="#efe6e6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font></Label>
+                  <Separator layoutX="-2.0" layoutY="86.0" prefHeight="3.0" prefWidth="216.0" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="125.0" prefHeight="32.0" prefWidth="176.0" text="Acceuil" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="125.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="175.0" prefHeight="32.0" prefWidth="176.0" text="Produits" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="175.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="225.0" prefHeight="32.0" prefWidth="176.0" text="Catégories" textFill="WHITESMOKE" AnchorPane.topAnchor="225.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="275.0" prefHeight="32.0" prefWidth="176.0" text="Evenements" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="275.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="325.0" prefHeight="32.0" prefWidth="176.0" text="Participations" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="325.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="375.0" prefHeight="32.0" prefWidth="176.0" text="Offre d'emploi" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="375.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="425.0" prefHeight="32.0" prefWidth="176.0" text="Demande d'emploi" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="425.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="215.0" layoutY="-27.0" prefHeight="86.0" prefWidth="684.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="595.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="306.0" layoutY="106.0" prefHeight="414.0" prefWidth="684.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0" />
+      <AnchorPane layoutX="226.0" layoutY="96.0" prefHeight="521.0" prefWidth="684.0" stylesheets="@../styles/gestionoffre.css">
+         <children>
+            <TextField fx:id="titreO" layoutX="28.0" layoutY="45.0" prefHeight="26.0" prefWidth="158.0" promptText="Titre" />
+            <TextField fx:id="descriptionO" layoutX="28.0" layoutY="100.0" prefHeight="26.0" prefWidth="158.0" promptText="Description" />
+            <TextField fx:id="experienceO" layoutX="241.0" layoutY="100.0" prefHeight="26.0" prefWidth="176.0" promptText="Experience" />
+            <DatePicker fx:id="dateO" layoutX="241.0" layoutY="45.0" />
+            <TableView fx:id="afficherO" layoutX="29.0" layoutY="268.0" onMouseClicked="#choisirOffre" prefHeight="226.0" prefWidth="531.0" styleClass="table-view" stylesheets="@../styles/gestionoffre.css">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="76.800048828125" text="ID" />
+                <TableColumn fx:id="colTitre" prefWidth="102.39996337890625" text="Titre" />
+                  <TableColumn fx:id="colDate" prefWidth="113.5999755859375" text="Date limite" />
+                  <TableColumn fx:id="colDescription" prefWidth="119.2000732421875" text="Description" />
+                  <TableColumn fx:id="colExperience" prefWidth="116.7999267578125" text="Experience" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="500.0" layoutY="44.0" onAction="#ajouterO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Ajouter" />
+            <JFXButton layoutX="500.0" layoutY="100.0" onAction="#modifierO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Modifier" />
+            <JFXButton layoutX="500.0" layoutY="224.0" onAction="#supprimerO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Supprimer" />
+            <JFXButton fx:id="pdff" layoutX="500.0" layoutY="164.0" onAction="#exportpdf" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Export PDF" />
+            <JFXButton fx:id="qrcode" layoutX="366.0" layoutY="224.0" onAction="#Onqrcode" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="QR CODE" />
+            <ImageView fx:id="qrcodee" fitHeight="104.0" fitWidth="112.0" layoutX="568.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton layoutX="203.0" layoutY="224.0" onAction="#OnStats" prefHeight="26.0" prefWidth="119.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Statistiques" />
+            <TextField fx:id="tfrecherche" layoutX="14.0" layoutY="225.0" promptText="Recherche" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

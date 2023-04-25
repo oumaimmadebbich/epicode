@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/services/OffreService.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/interfaces/IdemandeController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/entities/Offre.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/styles/gestionoffre.css</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/GestionDemandesController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/images/user%20(1).png</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/GestionOffres.fxml</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/entities/User.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/interfaces/IuserController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/utils/connexionDB.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/services/DemandeService.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/GestionDemandes.fxml</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/services/UserService.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/offre/demande/OffreDemande.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/services/PDFGenerator.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/NewFXMain.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/entities/Demande.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/GestionOffresController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/StatsController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/services/Mailservice.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/interfaces/IoffreController.java</file>
+            <file>file:/C:/Users/trabe/Documents/NetBeansProjects/offre+demande/src/gui/Stats.fxml</file>
+        </group>
+    </open-files>
+</project-private>
