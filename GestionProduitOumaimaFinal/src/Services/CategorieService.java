@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import utils.MyConnection;
 
 /**
@@ -96,5 +98,18 @@ public class CategorieService  implements IServices<Categorie>{
     public List<Categorie> insert() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
+ /* public Categorie SearchById(long id_categorie) throws SQLException{
+        Statement stm = conx.createStatement();
+        Categorie categorie = new Categorie();
+        String query = "select * from categorie where id_categorie="+id;
+        ResultSet result= stm.executeQuery(query);
+        while (result.next()){
+        Categorie.setId(result.getInt("id_categorie"));
+        
+        Categorie.setNom(result.getString("Nom_categorie"));
+        
+        return categorie;
+    }*/
+    
 }
+  

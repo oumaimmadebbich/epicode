@@ -65,6 +65,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -81,6 +83,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
@@ -105,19 +108,27 @@ public class CategorieController implements Initializable {
     @FXML
     private TableColumn<Categorie, String> nom_aff;
     @FXML
-    private TextField search_barre;
+    private HBox chosenhotelCard;
     @FXML
     
     
-    private Button codeQr;
+    private HBox chosenhotelCard1;
+    @FXML
+    private TextField TFSearch;
+    @FXML
+    private TextField filterfield;
 
     /**
      * Initializes the controller class.
      */
+    CategorieService cr= new CategorieService();
+        
+        List<Categorie> li =cr.realAll();
+        ObservableList<Categorie> data = FXCollections.observableArrayList(li);
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        
+TFSearch.textProperty().addListener((observable, oldValue, newValue) -> search());
               CategorieService cr= new CategorieService();
         
         List<Categorie> li =cr.realAll();
@@ -284,5 +295,57 @@ public class CategorieController implements Initializable {
            
         }
     }
-  
+ /*public void recherche_avance() throws SQLException {
+          
+                  data = FXCollections.observableArrayList(cr.realAll());
+            //System.out.println(data);
+            FilteredList<Categorie> filteredData = new FilteredList<>(data, b -> true);
+            TFSearch.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate(p -> {
+                    if (newValue == null || newValue.isEmpty()) {
+                        return true;
+                    }
+                    String lowerCaseFilter = newValue.toLowerCase();
+                    if (String.valueOf(p.getId()).toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+                        return true; 
+                    } 
+              
+                    else if(String.valueOf(p.getNom()).toLowerCase().indexOf(lowerCaseFilter)!=-1){
+                    return true;
+                    }
+                    
+                    else
+                        return false; // Does not match.
+                });
+                
+            });
+		// 3. Wrap the FilteredList in a SortedList. 
+		SortedList<Categorie> sortedData = new SortedList<>(filteredData);
+		
+		// 4. Bind the SortedList comparator to the TableView comparator.
+		// 	  Otherwise, sorting the TableView would have no effect.
+		sortedData.comparatorProperty().bind(table_Categ.comparatorProperty());
+		
+		// 5. Add sorted (and filtered) data to the table.
+		table_Categ.setItems(sortedData);
+             
+ 
+    }*/
+@FXML
+        private void search() {
+            String query = TFSearch.getText();
+            ObservableList<Categorie> filteredList = FXCollections.observableArrayList();
+                      CategorieService cp =new CategorieService();
+            List<Categorie> li =cp.realAll();
+        ObservableList<Categorie> data = FXCollections.observableArrayList(li);
+            for (Categorie categorie : li) {
+                if (categorie.getNom().toLowerCase().contains(query.toLowerCase())) {
+                    filteredList.add(categorie);
+                }
+            }
+    table_Categ.setItems(filteredList);
+    
 }
+}
+ 
+

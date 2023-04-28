@@ -206,4 +206,30 @@ private Categorie retrieveCategorie(int id) throws SQLException {
     stmt.close();
     return categorie;
 }
+
+
+
+    public List<Produit> recupererProduit() throws SQLException {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        List<Produit> Produits = new ArrayList<>();
+        String s = "select * from produit";
+        Statement st = cnx.createStatement();// nesta3leha fel affichage
+        ResultSet rs = st.executeQuery(s);
+        while (rs.next()) {
+            Produit e = new Produit();
+            e.setTitre(rs.getString("titre"));
+            e.setPrix(rs.getInt("prix"));
+            e.setImage(rs.getString("image"));
+            e.setDescription(rs.getString("description"));
+            e.setQuantite(rs.getInt("quantite"));
+            Produits.add(e);
+
+        }
+        return Produits;
+    }
+
+
+
+
 }
