@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="1022.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProduitstatController">
+    <stylesheets>
+        <URL value="@produitstat.css" />
+    </stylesheets>
+   <children>
+      <PieChart id="chartCategorie" fx:id="pie" layoutX="43.0" layoutY="93.0" prefHeight="425.0" prefWidth="434.0" />
+      <Label id="totale" fx:id="totale" layoutX="667.0" layoutY="108.0" text="totale">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Label id="totaleProduit" layoutX="663.0" layoutY="73.0" text="Nombre totale des produits">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="651.0" layoutY="174.0" text="moyenne des prix des produits ajoutees">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label id="averageprix" fx:id="average" layoutX="651.0" layoutY="222.0" text="average">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Label layoutX="627.0" layoutY="293.0" prefHeight="21.0" prefWidth="264.0" text="list des produit avec remise">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <TableView fx:id="remisetab" layoutX="555.0" layoutY="340.0" prefHeight="196.0" prefWidth="434.0" stylesheets="@tablev.css">
+        <columns>
+          <TableColumn fx:id="nomProdd" prefWidth="75.0" text="nom produit" />
+          <TableColumn fx:id="prixprodd" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="pourprodd" prefWidth="75.0" text="pourcentage remise" />
+            <TableColumn fx:id="prixRemise" prefWidth="75.0" text="prix remise" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="46.0" layoutX="472.0" layoutY="19.0" stroke="#0f2b4d" strokeType="OUTSIDE" strokeWidth="5.0" width="328.0" />
+      <Label layoutX="490.0" layoutY="4.0" prefHeight="76.0" prefWidth="306.0" text="produit selon les categorie">
+         <font>
+            <Font name="Harlow Solid Italic" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#gestion_produit" prefHeight="31.0" prefWidth="213.0" text="gestion produit">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
