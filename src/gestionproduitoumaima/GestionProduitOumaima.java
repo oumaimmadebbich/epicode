@@ -30,7 +30,7 @@ public class GestionProduitOumaima {
         Categorie C1=new Categorie(44,"sondes");
       ca.update(C1);
       ca.realAll().forEach(System.out::println);
-      
+
               Produit p= new Produit("sondes",1,"gbdcjqz","hbcjsz",852,44);
               ProduitService ps= new ProduitService();
               ps.insert(p);
@@ -38,8 +38,8 @@ public class GestionProduitOumaima {
                ps.realAll().forEach(System.out::println);
                 Produit p1= new Produit(40,"sondes",1,"gbdcjqz","hbcjsz",852,44);
                ps.update(p1);
-              
-      
+
+
     }
-    
+
 }
