@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/NewFXMain.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/AfficherproduitController.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Services/IServices.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/CategorieController.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/entites/Produit.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/utils/MyConnection.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/afficherproduit.fxml</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/produitcontroller.css</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Services/ProduitService.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/entites/Categorie.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/produits.css</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/ProduitsController.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/frontprod.css</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/ProduitController.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/entites/ProduitRemise.java</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/afficherproduit.css</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/produits.fxml</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/produitstat.css</file>
+            <file>file:/C:/Users/oumaima%20debbich/Desktop/GestionProduitOumaimaFinal/src/Gui/style.css</file>
+        </group>
+    </open-files>
+</project-private>
