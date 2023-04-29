@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StatsController">
+   <children>
+      <Label layoutX="250.0" layoutY="63.0" text="Statistique des Demandes">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="statistique" layoutX="14.0" layoutY="110.0" prefHeight="400.0" prefWidth="325.0" />
+      <PieChart fx:id="statistique2" layoutX="422.0" layoutY="120.0" prefHeight="400.0" prefWidth="325.0" />
+   </children>
+</AnchorPane>
