@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GestionDemandesController">
+   <children>
+      <Pane layoutX="220.0" layoutY="-5.0" prefHeight="88.0" prefWidth="714.0" style="-fx-background-color: green;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="595.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" layoutY="-3.0" prefHeight="74.0" prefWidth="226.0" style="-fx-background-color: green;">
+         <children>
+            <Label layoutX="74.0" layoutY="27.0" text="ReUsed" textFill="#efe6e6">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-2.0" layoutY="86.0" prefHeight="3.0" prefWidth="216.0" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="-6.0" layoutY="-3.0" prefHeight="671.0" prefWidth="226.0" style="-fx-background-color: green;">
+         <children>
+            <Pane layoutX="8.0" layoutY="8.0" prefHeight="88.0" prefWidth="226.0" style="-fx-background-color: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="74.0" layoutY="27.0" text="ReUsed" textFill="#efe6e6">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="-2.0" layoutY="86.0" prefHeight="3.0" prefWidth="216.0" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="125.0" prefHeight="32.0" prefWidth="176.0" text="Acceuil" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="125.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="175.0" prefHeight="32.0" prefWidth="176.0" text="Produits" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="175.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="225.0" prefHeight="32.0" prefWidth="176.0" text="Catégories" textFill="WHITESMOKE" AnchorPane.topAnchor="225.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="275.0" prefHeight="32.0" prefWidth="176.0" text="Evenements" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="275.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="325.0" prefHeight="32.0" prefWidth="176.0" text="Participations" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="325.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="375.0" prefHeight="32.0" prefWidth="176.0" text="Offre d'emploi" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="375.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="20.0" layoutY="425.0" prefHeight="32.0" prefWidth="176.0" text="Demande d'emploi" textFill="WHITESMOKE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="425.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITESMOKE" glyphName="HOME" size="17" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="cvD" layoutX="247.0" layoutY="126.0" prefHeight="26.0" prefWidth="150.0" promptText="CV" />
+      <DatePicker fx:id="dateD" layoutX="542.0" layoutY="126.0" />
+      <JFXButton layoutX="764.0" layoutY="126.0" onAction="#ajouterD" prefHeight="26.0" prefWidth="102.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Ajouter" />
+      <Button fx:id="cvdemande" layoutX="397.0" layoutY="126.0" mnemonicParsing="false" onAction="#uploadpdf" prefHeight="25.0" prefWidth="27.0" text="Button" />
+      <ComboBox fx:id="nomoffre" layoutX="548.0" layoutY="186.0" prefHeight="26.0" prefWidth="176.0" />
+      <Label layoutX="504.0" layoutY="191.0" text="Offre" />
+      <ImageView fx:id="cvview" fitHeight="150.0" fitWidth="200.0" layoutX="267.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton layoutX="764.0" layoutY="186.0" onAction="#modifierD" prefHeight="26.0" prefWidth="102.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Modifier" />
+      <JFXButton layoutX="621.0" layoutY="319.0" onAction="#supprimerD" prefHeight="26.0" prefWidth="102.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Supprimer" />
+      <ComboBox fx:id="nomuser" layoutX="247.0" layoutY="186.0" prefHeight="26.0" prefWidth="176.0" />
+      <TableView fx:id="listedemande" layoutX="235.0" layoutY="419.0" prefHeight="200.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="98.40003967285156" text="ID" />
+          <TableColumn fx:id="etatt" prefWidth="110.4000244140625" text="Etat" />
+            <TableColumn fx:id="cv" prefWidth="110.4000244140625" text="CV" />
+            <TableColumn fx:id="date" prefWidth="110.4000244140625" text="Date Postulation" />
+            <TableColumn fx:id="clientt" prefWidth="110.4000244140625" text="Client" />
+            <TableColumn fx:id="offree" prefWidth="110.4000244140625" text="Offre" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
