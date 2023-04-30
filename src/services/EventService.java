@@ -95,13 +95,19 @@ Connection cnx = MyConnection.getInstance().getCnx();
     @Override
     public void delete(int id) {
     try {
-        String req = "DELETE FROM `event` WHERE `event`.`id`='"+id+"';";
-        Statement st = cnx.createStatement();
-        st.executeUpdate(req);
-        System.out.println("Event Deleted Successfully!");
-    } catch (SQLException ex) {
-        Logger.getLogger(EventService.class.getName()).log(Level.SEVERE, null, ex);
+       
+        PreparedStatement pst = cnx.prepareStatement("DELETE FROM participation WHERE id_evenement_id = ?");
+        pst.setInt(1, id);
+        pst.executeUpdate();
+        pst = cnx.prepareStatement("DELETE FROM event WHERE id = ?");
+        pst.setInt(1, id);
+        pst.executeUpdate();
+       
+    } catch (Exception e) {
+        System.err.println("Got an exception! ");
+        System.err.println(e.getMessage());
     }
+    
     }
   public Event getEV(int id) {
     try {

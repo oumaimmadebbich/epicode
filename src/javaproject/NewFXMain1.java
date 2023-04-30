@@ -41,7 +41,7 @@ public class NewFXMain1 extends Application {
         Parent root = loader.load();
         
         Scene scene = new Scene(root, 600, 800);
-         scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+         scene.getStylesheets().add(getClass().getResource("../resource/MyText.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -433,7 +433,7 @@ try {
         
         Scene scene = new Scene(root, 300, 250);
         
-        scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("../resource/MyText.css").toExternalForm());
         Stage primaryStage=new Stage();
         
         primaryStage.setScene(scene);

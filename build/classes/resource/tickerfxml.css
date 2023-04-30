@@ -1,0 +1,92 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+@font-face {
+    font-family: "Staatliches";
+    src: url("https://fonts.gstatic.com/s/staatliches/v5/HI_OiY8KO6hCsQSoAPmtBtCWcynf_cDxXwCLxiixG1c.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("https://fonts.gstatic.com/s/nanumpenscript/v12/daaCSScvJGqLYhG8nNt8KPPbWDVf6NQlKj8Pu4uu2kg.woff2") format("woff2");
+}
+
+* {
+    -fx-margin: 0;
+    -fx-padding: 0;
+    -fx-border-sizing: border-box;
+}
+
+body,
+html {
+    -fx-height: 100%;
+    -fx-display: grid;
+    -fx-font-family: "Staatliches", cursive;
+    -fx-background-color: #d83565;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-letter-spacing: 0.1em;
+}
+
+.ticket {
+    -fx-margin: auto;
+    -fx-display: flex;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 0px, 19px, 38px, 0px), dropshadow(gaussian, rgba(0, 0, 0, 0.22), 0px, 15px, 12px, 0px);
+}
+
+.left {
+    -fx-display: flex;
+}
+
+.image {
+    -fx-pref-height: 250px;
+    -fx-pref-width: 250px;
+    -fx-background-image: url("https://media.pitchfork.com/photos/60db53e71dfc7ddc9f5086f9/1:1/w_1656,h_1656,c_limit/Olivia-Rodrigo-Sour-Prom.jpg");
+    -fx-background-size: contain;
+    -fx-opacity: 0.85;
+}
+
+.admit-one {
+    -fx-position: absolute;
+    -fx-text-fill: darkgray;
+    -fx-pref-height: 250px;
+    -fx-padding: 0 10px;
+    -fx-letter-spacing: 0.15em;
+    -fx-display: flex;
+    -fx-text-alignment: center;
+    -fx-justify-content: space-around;
+    -fx-writing-mode: vertical-rl;
+    -fx-transform: rotate(-180deg);
+}
+
+.admit-one span:nth-child(2) {
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+}
+
+.left .ticket-number {
+    -fx-pref-height: 250px;
+    -fx-pref-width: 250px;
+    -fx-display: flex;
+    -fx-justify-content: flex-end;
+    -fx-align-items: flex-end;
+    -fx-padding: 5px;
+}
+
+.ticket-info {
+    -fx-padding: 10px 30px;
+    -fx-display: flex;
+    -fx-flex-direction: column;
+    -fx-text-alignment: center;
+    -fx-justify-content: space-between;
+    -fx-align-items: center;
+}
+
+.date {
+    -fx-border-top: 1px solid gray;
+    -fx-border-bottom: 1px solid gray;
+    -fx-padding: 5px 0;
+}

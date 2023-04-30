@@ -9,15 +9,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.FXML1Controller">
    <children>
-      <AnchorPane fx:id="AnchorE" layoutX="185.0" layoutY="66.0" prefHeight="431.0" prefWidth="568.0" style="-fx-background-color: white; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-border-color: #999999; -fx-border-width: 1px;">
+      <AnchorPane fx:id="AnchorE" layoutX="185.0" layoutY="66.0" prefHeight="431.0" prefWidth="568.0" style="-fx-background-color: #95ccff; -fx-border-width: 5px; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 5px;">
          <children>
             <ImageView fx:id="ImageV2" fitHeight="290.0" fitWidth="427.0" layoutX="71.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
             <Line endX="444.4000244140625" layoutX="122.0" layoutY="64.0" opacity="0.45" startX="-122.00001525878906" stroke="#b4b1b1" />
-            <DialogPane layoutX="70.0" layoutY="354.0" prefHeight="76.0" prefWidth="427.0" style="-fx-background-color: white;" />
+            <DialogPane layoutX="70.0" layoutY="354.0" prefHeight="76.0" prefWidth="427.0" style="-fx-background-color: #95ccff;" />
             <Text fx:id="nbrP" layoutX="94.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
             <Button fx:id="ButtonP" layoutX="176.0" layoutY="392.0" mnemonicParsing="false" onAction="#Participate" prefHeight="31.0" prefWidth="88.0" text="Participate" />
             <Button fx:id="ButtonS" layoutX="283.0" layoutY="392.0" mnemonicParsing="false" onAction="#Share" prefHeight="31.0" prefWidth="88.0" text="Share" />
@@ -40,6 +42,12 @@
                 <MenuItem fx:id="VersP" mnemonicParsing="false" onAction="#ChangeToP" text="Mes Participations" />
               </items>
             </MenuButton>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="48.0" layoutX="187.0" layoutY="6.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="5.0" width="528.0" />
+            <Label graphicTextGap="1.0" layoutX="371.0" layoutY="-6.0" prefHeight="61.0" prefWidth="375.0" text="Evenements">
+               <font>
+                  <Font name="Harlow Solid Italic" size="36.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

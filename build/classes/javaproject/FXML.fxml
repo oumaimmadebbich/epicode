@@ -10,25 +10,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="1126.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.FXMLController">
    <children>
-      <Label layoutX="111.0" layoutY="57.0" prefHeight="21.0" prefWidth="82.0" text="Title :" />
-      <Label layoutX="111.0" layoutY="127.0" text="Description :" />
-      <TextField id="addNom" fx:id="NomText" layoutX="192.0" layoutY="59.0" />
-      <TextField id="addPreNom" fx:id="imageE" layoutX="193.0" layoutY="352.0" />
-      <TextArea fx:id="AllText" layoutX="193.0" layoutY="101.0" prefHeight="87.0" prefWidth="160.0" />
-      <Label layoutX="140.0" layoutY="356.0" text="Image :" />
-      <Button layoutX="232.0" layoutY="476.0" mnemonicParsing="false" onAction="#AddAction" style="-fx-background-color: #ADD8E6;" text="Add Event" />
-      <Button fx:id="Bimage" layoutX="208.0" layoutY="308.0" mnemonicParsing="false" onAction="#BrowseImage" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #ADD8E6;" text="Browse" />
-      <DatePicker fx:id="TimeEvent" depthTest="DISABLE" layoutX="193.0" layoutY="389.0" prefHeight="26.0" prefWidth="160.0" />
-      <Label layoutX="144.0" layoutY="394.0" text="Time :" />
-      <Label layoutX="104.0" layoutY="431.0" prefHeight="21.0" prefWidth="111.0" text="Organisation :" />
-      <ImageView fx:id="ImageView" fitHeight="114.0" fitWidth="200.0" layoutX="173.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField id="addNom" fx:id="Organisation" layoutX="192.0" layoutY="429.0" />
-      <TableView fx:id="EventTable" layoutX="564.0" layoutY="80.0" prefHeight="398.0" prefWidth="562.0">
+      <TableView fx:id="EventTable" layoutX="564.0" layoutY="80.0" prefHeight="414.0" prefWidth="562.0" style="-fx-border-color: black; -fx-border-width: 5px;">
         <columns>
           <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="TitleCol" prefWidth="75.0" text="Title" />
@@ -45,10 +33,53 @@
       <Text fx:id="ERROR3" fill="#ea0101" layoutX="373.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.19999999999993" />
       <Text fx:id="ERROR4" fill="#d90d0d" layoutX="383.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.19999999999993" />
       <Text fx:id="ERROR5" fill="#ec0808" layoutX="364.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="111.19999999999993" />
-      <Text layoutX="28.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event" wrappingWidth="82.40000000000003">
+      <Pane layoutX="6.0" layoutY="67.0" opacity="0.94" prefHeight="529.0" prefWidth="522.0" style="-fx-background-color: #95ccff; -fx-border-color: black; -fx-border-width: 5px;" styleClass="right-bar" stylesheets="@../../../../Documents/GestionCommande%20-%20Copy/src/gestioncommande/Gui/style.css">
+         <children>
+            <TextField id="addNom" fx:id="NomText" layoutX="187.0" layoutY="23.0" prefHeight="34.0" prefWidth="164.0" />
+            <TextArea fx:id="AllText" layoutX="191.0" layoutY="68.0" prefHeight="79.0" prefWidth="160.0" />
+            <ImageView fx:id="ImageView" fitHeight="97.0" fitWidth="200.0" layoutX="171.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="Bimage" layoutX="212.0" layoutY="267.0" mnemonicParsing="false" onAction="#BrowseImage" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: #ADD8E6;" text="Browse" />
+            <TextField id="addPreNom" fx:id="imageE" layoutX="191.0" layoutY="315.0" prefHeight="34.0" prefWidth="160.0" />
+            <DatePicker fx:id="TimeEvent" depthTest="DISABLE" layoutX="186.0" layoutY="372.0" prefHeight="38.0" prefWidth="176.0" />
+            <TextField id="addNom" fx:id="Organisation" layoutX="186.0" layoutY="431.0" prefHeight="38.0" prefWidth="170.0" />
+            <Button layoutX="234.0" layoutY="482.0" mnemonicParsing="false" onAction="#AddAction" style="-fx-background-color: #ADD8E6;" text="Add Event" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="34.0" layoutX="12.0" layoutY="23.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="136.0" />
+            <Label layoutX="23.0" layoutY="23.0" prefHeight="34.0" prefWidth="102.0" styleClass="labelform" text="Title :">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="46.0" layoutX="10.0" layoutY="80.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="160.0" />
+            <Label layoutX="10.0" layoutY="86.0" prefHeight="34.0" prefWidth="140.0" styleClass="labelform" text="Description :">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="34.0" layoutX="12.0" layoutY="315.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="136.0" />
+            <Label layoutX="23.0" layoutY="313.0" prefHeight="34.0" prefWidth="102.0" styleClass="labelform" text="Image :">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="34.0" layoutX="12.0" layoutY="374.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="136.0" />
+            <Label layoutX="21.0" layoutY="376.0" prefHeight="34.0" prefWidth="102.0" styleClass="labelform" text="Time :">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="46.0" layoutX="7.0" layoutY="434.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="160.0" />
+            <Label layoutX="8.0" layoutY="439.0" prefHeight="34.0" prefWidth="164.0" styleClass="labelform" text="Oraganisation :">
+               <font>
+                  <Font name="Gill Sans MT" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="38.0" layoutX="-5.0" layoutY="5.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="5.0" width="311.0" />
+      <Label graphicTextGap="1.0" layoutY="-17.0" prefHeight="61.0" prefWidth="375.0" text="Add Event">
          <font>
-            <Font name="System Bold Italic" size="24.0" />
+            <Font name="Harlow Solid Italic" size="36.0" />
          </font>
-      </Text>
+      </Label>
    </children>
 </AnchorPane>

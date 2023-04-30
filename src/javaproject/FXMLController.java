@@ -161,6 +161,8 @@ public class FXMLController implements Initializable {
    
        
        ps.addEvent(E);
+   Date v=new Date(0000-00-00);
+       this.setTextField("", "", "", v, "");
        refreshTable();
                                        }
        
@@ -175,7 +177,7 @@ public class FXMLController implements Initializable {
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
         File file = fileChooser.showOpenDialog(null);
-        String DBPath = "C:\\\\xampp\\\\htdocs\\\\imageP\\\\"  + x + ".jpg";
+        String DBPath = "C:\\xampp\\htdocs\\Offre+Demande\\public\\uploads\\"  + x + ".jpg";
         if (file != null) {
             FileInputStream Fsource = new FileInputStream(file.getAbsolutePath());
             FileOutputStream Fdestination = new FileOutputStream(DBPath);
@@ -188,7 +190,7 @@ public class FXMLController implements Initializable {
             /* File File1 = new File(DBPath);
             Image img = new Image(File1.getAbsolutePath());
             image_event.setImage(img);*/
-             imageE.setText(DBPath);
+             imageE.setText(x+".jpg");
             int b = 0;
             while (b != -1) {
                 b = bin.read();
@@ -301,6 +303,9 @@ public class FXMLController implements Initializable {
                                     
        
                                     ps.updateEvent(EV);
+                                       Date v=new Date(0000-00-00);
+                                       setTextField("","","",v,"");
+                  
                                 refreshTable();
                                        }
                                         }

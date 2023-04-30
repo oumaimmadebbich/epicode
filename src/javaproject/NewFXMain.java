@@ -24,15 +24,15 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML.fxml"));
         
         
         Parent root = loader.load();
         
         
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 500, 500);
         
-        scene.getStylesheets().add(getClass().getResource("MyText.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("../resource/MyText.css").toExternalForm());
        
         primaryStage.setScene(scene);
         primaryStage.show();
