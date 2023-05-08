@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1263.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ProduitController">
+   <children>
+      <Button fx:id="ajouter" layoutX="335.0" layoutY="690.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Button>
+      <Button fx:id="supprimer" layoutX="436.0" layoutY="734.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Button>
+      <TableView fx:id="table_Prod" layoutX="748.0" layoutY="114.0" prefHeight="257.0" prefWidth="530.0" stylesheets="@tablev.css">
+        <columns>
+          <TableColumn fx:id="idP" prefWidth="58.0" text="ID" />
+          <TableColumn fx:id="titreP" prefWidth="50.0" text="titre" />
+            <TableColumn fx:id="prixP" prefWidth="88.0" text="prix" />
+            <TableColumn fx:id="descriptionP" prefWidth="69.0" text="description" />
+            <TableColumn fx:id="image" prefWidth="87.0" text="image" />
+            <TableColumn fx:id="quantiteP" prefWidth="74.0" text="quantité" />
+            <TableColumn fx:id="id_categ" prefWidth="104.0" text="id_catégorie" />
+        </columns>
+      </TableView>
+      <Button layoutX="554.0" layoutY="690.0" mnemonicParsing="false" onAction="#modifier" text="Modifier">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Button>
+      <Pane layoutX="313.0" layoutY="-2.0" prefHeight="80.0" prefWidth="1010.0" style="-fx-background-color: #1e2b3c;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="46.0" layoutX="338.0" layoutY="31.0" stroke="#0f2b4d" strokeType="OUTSIDE" strokeWidth="5.0" width="328.0" />
+            <Label layoutX="356.0" layoutY="6.0" prefHeight="76.0" prefWidth="306.0" text="Gestion Produit">
+               <font>
+                  <Font name="Harlow Solid Italic" size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <VBox layoutX="-9.0" layoutY="-15.0" prefHeight="806.0" prefWidth="306.0" style="-fx-background-color: #95ccff;" styleClass="right-bar" stylesheets="@style.css">
+         <children>
+            <HBox fx:id="chosenhotelCard1" alignment="CENTER" prefHeight="110.0" prefWidth="200.0" styleClass="shadow" stylesheets="@../../../GestionCommande/src/gestioncommande/Gui/style.css">
+               <children>
+                  <Label text="ReUsed" textFill="#8d8686">
+                     <font>
+                        <Font name="Cambria Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="310.0" styleClass="search-box" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <TextField prefHeight="50.0" prefWidth="180.0" styleClass="transparent" stylesheets="@style.css">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <BorderPane prefHeight="53.0" prefWidth="385.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="484.0" prefWidth="274.0" style="-fx-background-color: #1e2b3c;" styleClass="chosen-fruit-card" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="80.0" prefWidth="265.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="12.0" prefWidth="99.0" text="Language" textFill="#c6c1c100">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="0.0" prefWidth="241.0" />
+                  <Button mnemonicParsing="false" onAction="#gestion_categorie" prefHeight="31.0" prefWidth="213.0" text="gestion categorie">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Pane layoutX="313.0" layoutY="149.0" opacity="0.94" prefHeight="520.0" prefWidth="394.0" style="-fx-background-color: #95ccff;" styleClass="right-bar" stylesheets="@../../../GestionCommande/src/gestioncommande/Gui/style.css">
+         <children>
+            <TextField fx:id="quantite" layoutX="169.0" layoutY="272.0" />
+            <Label layoutX="19.0" layoutY="277.0" text="Quantité :">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comb_categ" layoutX="169.0" layoutY="194.0" prefHeight="31.0" prefWidth="186.0" promptText="oumaima" />
+            <Label layoutX="20.0" layoutY="199.0" text="ID_ categ">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="description" layoutX="169.0" layoutY="134.0" />
+            <Label layoutX="10.0" layoutY="139.0" text="Description :">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prix" layoutX="170.0" layoutY="86.0" />
+            <Label layoutX="27.0" layoutY="91.0" text="Prix :">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titre" layoutX="169.0" layoutY="28.0" />
+            <Label layoutX="24.0" layoutY="33.0" text="Titre :">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="393.0" text="Image :">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="130.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="748.0" layoutY="380.0" opacity="0.94" prefHeight="264.0" prefWidth="306.0" style="-fx-background-color: #95ccff;" styleClass="right-bar" stylesheets="@../../../GestionCommande/src/gestioncommande/Gui/style.css">
+         <children>
+            <Button fx:id="codeQr" layoutX="48.0" layoutY="31.0" mnemonicParsing="false" onAction="#qrcode" text="code Qr">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="codeqrr" fitHeight="92.0" fitWidth="140.0" layoutX="153.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="AnchorPane" layoutX="80.0" layoutY="158.0" mnemonicParsing="false" onAction="#stat" text="stat">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="pdf" layoutX="210.0" layoutY="160.0" mnemonicParsing="false" onAction="#pdf" text="pdf">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="110.0" layoutY="213.0" mnemonicParsing="false" onAction="#excel" text="Export Excel">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1078.0" layoutY="615.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/326163717_2664737323668513_1630947944460393060_n.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="738.0" layoutY="734.0" mnemonicParsing="false" onAction="#retour" prefHeight="26.0" prefWidth="99.0" text="Retour" />
+
+   </children>
+</AnchorPane>

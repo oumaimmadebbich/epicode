@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="left_main" prefHeight="824.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjouterLivreurController">
+   <children>
+      <Button fx:id="btn" layoutX="671.0" layoutY="634.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Creer Profile">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-57.0" layoutY="-37.0" prefHeight="175.0" prefWidth="1400.0" style="-fx-background-color: #1e2b3c;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="230.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="595.0" layoutY="231.0" prefHeight="34.0" prefWidth="62.0" styleClass="labelform" text="Nom">
+         <font>
+            <Font name="Gill Sans MT" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nom" layoutX="725.0" layoutY="222.0" prefHeight="50.0" prefWidth="234.0" promptText="Nom" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="294.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="582.0" layoutY="295.0" prefHeight="34.0" prefWidth="89.0" styleClass="labelform" text="Prenom">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="86.0" layoutX="561.0" layoutY="47.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="5.0" width="388.0" />
+      <Label layoutX="575.0" layoutY="32.0" prefHeight="96.0" prefWidth="366.0" text="Profile Livreur">
+         <font>
+            <Font name="Harlow Solid Italic" size="57.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prenom" layoutX="725.0" layoutY="287.0" prefHeight="50.0" prefWidth="234.0" promptText="prenom" />
+      <Button fx:id="retourr" layoutX="351.0" layoutY="634.0" mnemonicParsing="false" onAction="#back" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="back">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="352.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="560.0" layoutY="353.0" prefHeight="34.0" prefWidth="134.0" styleClass="labelform" text="Telephone">
+         <font>
+            <Font name="Gill Sans MT" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="telephone" layoutX="725.0" layoutY="344.0" prefHeight="50.0" prefWidth="234.0" promptText="Telephone" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="416.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="568.0" layoutY="417.0" prefHeight="34.0" prefWidth="116.0" styleClass="labelform" text="Secteur">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="secteur" layoutX="725.0" layoutY="409.0" prefHeight="50.0" prefWidth="234.0" promptText="Secteur" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="536.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="568.0" layoutY="537.0" prefHeight="34.0" prefWidth="116.0" styleClass="labelform" text="Type">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="type_livreur" layoutX="725.0" layoutY="529.0" prefHeight="50.0" prefWidth="234.0" promptText="Type" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="553.0" layoutY="471.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="568.0" layoutY="472.0" prefHeight="34.0" prefWidth="116.0" styleClass="labelform" text="Password">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="access_profil" layoutX="985.0" layoutY="634.0" mnemonicParsing="false" onAction="#Profile" prefHeight="65.0" prefWidth="247.0" styleClass="search-button" stylesheets="@style.css" text="vous avez déja un profile">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" layoutX="725.0" layoutY="476.0" prefHeight="40.0" prefWidth="234.0" />
+      
+   </children>
+</AnchorPane>

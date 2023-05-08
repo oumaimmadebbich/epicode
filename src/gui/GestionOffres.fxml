@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GestionOffresController">
+   <children>
+      <AnchorPane layoutX="306.0" layoutY="106.0" prefHeight="414.0" prefWidth="684.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton layoutX="546.0" layoutY="332.0" onAction="#retour" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Retour" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="226.0" layoutY="96.0" prefHeight="521.0" prefWidth="684.0" stylesheets="@../styles/gestionoffre.css">
+         <children>
+            <TextField fx:id="titreO" layoutX="28.0" layoutY="45.0" prefHeight="26.0" prefWidth="158.0" promptText="Titre" />
+            <TextField fx:id="descriptionO" layoutX="28.0" layoutY="100.0" prefHeight="26.0" prefWidth="158.0" promptText="Description" />
+            <TextField fx:id="experienceO" layoutX="241.0" layoutY="100.0" prefHeight="26.0" prefWidth="176.0" promptText="Experience" />
+            <DatePicker fx:id="dateO" layoutX="241.0" layoutY="45.0" />
+            <TableView fx:id="afficherO" layoutX="29.0" layoutY="268.0" onMouseClicked="#choisirOffre" prefHeight="226.0" prefWidth="531.0" styleClass="table-view" stylesheets="@../styles/gestionoffre.css">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="76.800048828125" text="ID" />
+                <TableColumn fx:id="colTitre" prefWidth="102.39996337890625" text="Titre" />
+                  <TableColumn fx:id="colDate" prefWidth="113.5999755859375" text="Date limite" />
+                  <TableColumn fx:id="colDescription" prefWidth="119.2000732421875" text="Description" />
+                  <TableColumn fx:id="colExperience" prefWidth="116.7999267578125" text="Experience" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="500.0" layoutY="44.0" onAction="#ajouterO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Ajouter" />
+            <JFXButton layoutX="500.0" layoutY="100.0" onAction="#modifierO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Modifier" />
+            <JFXButton layoutX="500.0" layoutY="224.0" onAction="#supprimerO" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Supprimer" />
+            <JFXButton fx:id="pdff" layoutX="500.0" layoutY="164.0" onAction="#exportpdf" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Export PDF" />
+            <JFXButton fx:id="qrcode" layoutX="366.0" layoutY="224.0" onAction="#Onqrcode" prefHeight="26.0" prefWidth="100.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="QR CODE" />
+            <ImageView fx:id="qrcodee" fitHeight="104.0" fitWidth="112.0" layoutX="568.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton layoutX="203.0" layoutY="224.0" onAction="#OnStats" prefHeight="26.0" prefWidth="119.0" styleClass="buttons" stylesheets="@../styles/gestionoffre.css" text="Statistiques" />
+            <TextField fx:id="tfrecherche" layoutX="14.0" layoutY="225.0" promptText="Recherche" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="-8.0" layoutY="-6.0" prefHeight="806.0" prefWidth="244.0" style="-fx-background-color: #95ccff;" styleClass="right-bar">
+         <children>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="310.0" styleClass="search-box" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <TextField prefHeight="50.0" prefWidth="180.0" styleClass="transparent" stylesheets="@style.css">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox fx:id="chosenhotelCard1" alignment="CENTER" prefHeight="118.0" prefWidth="301.0" styleClass="shadow" stylesheets="@../../../GestionCommande/src/gestioncommande/Gui/style.css">
+               <children>
+                  <Label text="ReUsed" textFill="#8d8686">
+                     <font>
+                        <Font name="Cambria Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane prefHeight="53.0" prefWidth="385.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="487.0" prefWidth="172.0" style="-fx-background-color: #1e2b3c;" styleClass="chosen-fruit-card" stylesheets="@style.css">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="80.0" prefWidth="265.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="12.0" prefWidth="99.0" text="Language" textFill="#c6c1c100">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="0.0" prefWidth="241.0" />
+                  <Button mnemonicParsing="false" onAction="#gestion_Demandes" prefHeight="31.0" prefWidth="213.0" text="gestion Demandes">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <stylesheets>
+            <URL value="@style.css" />
+            <URL value="@style.css" />
+         </stylesheets>
+      </VBox>
+      <Pane layoutX="242.0" prefHeight="80.0" prefWidth="950.0" style="-fx-background-color: #1e2b3c;" stylesheets="@style.css">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="46.0" layoutX="338.0" layoutY="31.0" stroke="#0f2b4d" strokeType="OUTSIDE" strokeWidth="5.0" width="328.0" />
+            <Label layoutX="356.0" layoutY="6.0" prefHeight="76.0" prefWidth="306.0" text="Gestion offres">
+               <font>
+                  <Font name="Harlow Solid Italic" size="34.0" />
+               </font>
+            </Label>
+          
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

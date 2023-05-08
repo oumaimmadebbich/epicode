@@ -1,0 +1,39 @@
+ /*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18 avr. 2023, 10:53:27
+    Author     : habac
+*/
+
+
+
+.white-form{
+    -fx-background-color: #fff;
+}
+
+.other-form{
+    -fx-background-color: linear-gradient(to bottom right,#59a649, #59a649 );
+    -fx-text-fill:  #ffffff;
+    -fx-front-size: 14px;
+    
+}
+.create-btn{
+    -fx-background-color:transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-text-fill:  #ffffff;
+    -fx-cursor:hand;
+    
+}
+.create-btn:hover{
+    -fx-background-color:#828282 ;
+    
+    
+}
+
+
+
+

@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 avr. 2023, 08:19:04
+    Author     : azizb
+*/
+
+/* Définition des styles pour les boutons */
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}
+
+/* Définition des styles pour les labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+}
+
+/* Définition des styles pour les tableaux */
+.table-view {
+    -fx-background-color: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+/* Définition des styles pour les textfields */
+.text-field {
+    -fx-background-color: #E0E0E0;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-border-color: #BDBDBD;
+    -fx-border-width: 1px;
+}
+
+.text-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #2196F3;
+}
+
+/* Définition des styles pour les alertes */
+.alert {
+    -fx-background-color: #FFC107;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}

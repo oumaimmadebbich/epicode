@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.BackendController">
+   <children>
+      <MenuBar prefWidth="623.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Profile">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="378.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="375.0" fitWidth="600.0" opacity="0.46" pickOnBounds="true">
+               <image>
+                  <Image url="@../photo/ball-park-brand-RKQ4-Q5FF-o-unsplash.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="5.0" layoutY="1.0" prefHeight="334.0" prefWidth="199.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="118.0" text="Role" />
+                  <TextField fx:id="nom" layoutX="23.0" layoutY="32.0" prefHeight="26.0" prefWidth="176.0" promptText="Nom" />
+                  <TextField fx:id="numero" layoutX="23.0" layoutY="179.0" prefHeight="26.0" prefWidth="176.0" promptText="Numéro" />
+                  <Label layoutX="32.0" layoutY="14.0" text="Nom" />
+                  <ComboBox fx:id="role" layoutX="23.0" layoutY="135.0" prefHeight="26.0" prefWidth="176.0" />
+                  <Label layoutX="23.0" layoutY="161.0" text="Numéro" />
+                  <Label layoutX="23.0" layoutY="66.0" text="Mot de passe" />
+                  <PasswordField fx:id="password" layoutX="23.0" layoutY="84.0" prefHeight="26.0" prefWidth="176.0" promptText="Mot de passe" />
+                  <Button fx:id="btn_modif" layoutX="9.0" layoutY="282.0" mnemonicParsing="false" onAction="#modifiers" style="-fx-background-color: orange; -fx-text-fill: white;" text="Modifier" />
+                  <Button fx:id="btn_delete" layoutX="75.0" layoutY="282.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: orange; -fx-text-fill: white;" text="Delete" />
+                  <TextField fx:id="email" layoutX="23.0" layoutY="245.0" prefHeight="25.0" prefWidth="176.0" />
+                  <Label layoutX="24.0" layoutY="219.0" text="Email" />
+                  <Button fx:id="btn_ajout" layoutX="138.0" layoutY="282.0" mnemonicParsing="false" onAction="#ajouteee" style="-fx-background-color: orange; -fx-text-fill: white;" text="Ajouter" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="logout" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" onAction="#log_out" style="-fx-background-color: red; -fx-text-fill: white;" text="Se déconnecter" />
+            <TableView fx:id="affiche" layoutX="207.0" layoutY="46.0" prefHeight="315.0" prefWidth="392.0">
+              <columns>
+                <TableColumn fx:id="Id" prefWidth="41.0" text="ID" />
+                <TableColumn fx:id="nomm" prefWidth="56.0" text="Nom" />
+                  <TableColumn fx:id="emaill" prefWidth="99.0" text="Email" />
+                  <TableColumn fx:id="passwordd" prefWidth="71.0" text="Password" />
+                  <TableColumn fx:id="telephonee" prefWidth="66.0" text="Telephone" />
+                  <TableColumn fx:id="rolee" prefWidth="58.0" text="Role" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_modif1" layoutX="39.0" layoutY="338.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: orange; -fx-text-fill: white;" text="Retour" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

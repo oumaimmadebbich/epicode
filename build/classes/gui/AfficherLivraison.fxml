@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="left_main" prefHeight="824.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfficherLivraisonController">
+   <children>
+      <Button fx:id="retour" layoutX="965.0" layoutY="569.0" mnemonicParsing="false" onAction="#rafraichir" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Refraichir">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-23.0" layoutY="-7.0" prefHeight="175.0" prefWidth="1400.0" style="-fx-background-color: #1e2b3c;">
+         <children>
+            <HBox alignment="CENTER" layoutX="1016.0" layoutY="51.0" prefHeight="52.0" prefWidth="337.0" styleClass="search-box" stylesheets="@style.css">
+               <children>
+                  <TextField fx:id="searchField" onAction="#searchLivraison" prefHeight="50.0" prefWidth="306.0" promptText="Type here to search" styleClass="transparent" stylesheets="@style.css" />
+               </children></HBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="839.0" layoutY="61.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+            <Label layoutX="849.0" layoutY="62.0" prefHeight="34.0" prefWidth="126.0" styleClass="labelform" text="Recherche">
+               <font>
+                  <Font name="Gill Sans MT" size="29.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="16.0" layoutY="274.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="58.0" layoutY="275.0" prefHeight="34.0" prefWidth="62.0" styleClass="labelform" text="Nom">
+         <font>
+            <Font name="Gill Sans MT" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nom" layoutX="188.0" layoutY="266.0" prefHeight="50.0" prefWidth="234.0" promptText="Nom" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="16.0" layoutY="338.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="45.0" layoutY="339.0" prefHeight="34.0" prefWidth="89.0" styleClass="labelform" text="Address">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95ccff" height="86.0" layoutX="564.0" layoutY="122.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="5.0" width="388.0" />
+      <Label layoutX="627.0" layoutY="107.0" prefHeight="96.0" prefWidth="262.0" text="Livraison">
+         <font>
+            <Font name="Harlow Solid Italic" size="57.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_add" layoutX="188.0" layoutY="331.0" prefHeight="50.0" prefWidth="234.0" promptText="Address De déstination" />
+      <ListView fx:id="listviewP" layoutX="463.0" layoutY="241.0" prefHeight="293.0" prefWidth="739.0" />
+      <Button fx:id="retourr" layoutX="127.0" layoutY="569.0" mnemonicParsing="false" onAction="#back" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Retour">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="modif2" layoutX="422.0" layoutY="569.0" mnemonicParsing="false" onAction="#modifier" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Modifier">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_delete" layoutX="703.0" layoutY="569.0" mnemonicParsing="false" onAction="#delete" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Supprimer">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="36.0" layoutX="16.0" layoutY="396.0" stroke="#1e2b3c" strokeType="OUTSIDE" strokeWidth="2.0" width="146.0" />
+      <Label layoutX="23.0" layoutY="397.0" prefHeight="34.0" prefWidth="134.0" styleClass="labelform" text="Telephone">
+         <font>
+            <Font name="Gill Sans MT" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_tel" layoutX="188.0" layoutY="388.0" prefHeight="50.0" prefWidth="234.0" promptText="Telephone" />
+      <Button fx:id="retourr1" layoutX="200.0" layoutY="180.0" mnemonicParsing="false" onAction="#ajout" prefHeight="65.0" prefWidth="209.0" styleClass="search-button" stylesheets="@style.css" text="Ajouter Livraison">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Button>
+      
+   </children>
+</AnchorPane>

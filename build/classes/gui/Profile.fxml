@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="gui.ProfileController">
+    <stylesheets>
+        <URL value="@profile.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="496.0" layoutY="98.0" text="Role" />
+                  <Label layoutX="333.0" layoutY="98.0" text="Nom" />
+                  <Label layoutX="489.0" layoutY="175.0" text="Telephone" />
+                  <Label layoutX="332.0" layoutY="175.0" text="Prenom" />
+                  <Label layoutX="496.0" layoutY="251.0" text="Adresse" />
+                  <Label layoutX="332.0" layoutY="242.0" text="Email" />
+                  <TextField fx:id="fld_role" layoutX="442.0" layoutY="127.0" />
+                  <TextField fx:id="fld_nom" layoutX="272.0" layoutY="127.0" />
+                  <TextField fx:id="fld_prenom" layoutX="272.0" layoutY="200.0" />
+                  <TextField fx:id="fld_num" layoutX="442.0" layoutY="200.0" />
+                  <TextField fx:id="fld_email" layoutX="272.0" layoutY="278.0" />
+                  <TextField fx:id="fld_adr" layoutX="443.0" layoutY="278.0" />
+                  <ImageView fitHeight="400.0" fitWidth="261.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../../Bureau/user/src/photo/ball-park-brand-RKQ4-Q5FF-o-unsplash.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="reset_pwd" layoutX="274.0" layoutY="320.0" mnemonicParsing="false" text="Réinitialiser le mot de passe" />
+                  <Button fx:id="modifier" layoutX="492.0" layoutY="320.0" mnemonicParsing="false" text="Modifier" />
+                  <Button fx:id="logout" layoutX="489.0" layoutY="35.0" mnemonicParsing="false" text="Se deconnecter" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
