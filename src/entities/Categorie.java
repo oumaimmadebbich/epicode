@@ -7,7 +7,7 @@ package entites;
 
 import java.util.Objects;
 import java.util.Set;
-
+  
 /**
  *
  * @author oumaima debbich
